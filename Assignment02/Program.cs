@@ -10,6 +10,19 @@ namespace Assignment02
     {
         static void Main(string[] args)
         {
+
+            Hero myHero = new Hero("Vino");
+
+            myHero.show();
+
+            myHero.fight();
+
+
+
+            Console.WriteLine("press any key");
+
+            Console.ReadKey();
+
         }
     }
 }
