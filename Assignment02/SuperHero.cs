@@ -34,8 +34,16 @@ namespace Assignment02
             }
             while (counter < superPowers.Length);
         }
+        //++++++++++++++Method with a while loop to display the SuperPowers++++++++++++++++++++++++++++++++++++++++//
+        public void showPowers()
+        {
 
-
+            int index = 0;
+            while (index < superPowers.Length)
+            {
+                Console.WriteLine("Super power: {0}", superPowers[index]);
+                index++;
+            }
         }
     }
 }
