@@ -21,6 +21,21 @@ namespace Assignment02
             Random rnd = new Random();
             superPowers = new string[3];
 
+             //++++++++++++++loop that picks from the power list three times++++++++++++++++++++++++++++++++++++++++//
+            int counter = 0;
+            do
+            {
+                PowerValue = Powers[rnd.Next(0, Powers.Length - 1)];
+                if (!superPowers.Contains(PowerValue))
+                {
+                    superPowers[counter] = PowerValue;
+                    counter++;
+                }
+            }
+            while (counter < superPowers.Length);
+        }
+
+
         }
     }
 }
