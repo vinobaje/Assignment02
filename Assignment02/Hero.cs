@@ -7,9 +7,7 @@ namespace Assignment02
         //++++++++++++++++++++++++++++Private Properties+++++++++++++++++++++++++++++
 
         private int strength;
-
         private int speed;
-
         private int health;
         //++++++++++++++++++++++++++++Public Properties+++++++++++++++++++++++++++++
 
@@ -19,18 +17,15 @@ namespace Assignment02
 
         public Hero(string name)
         {
-
             this.name = name;
 
             generateAbilities();
-
         }
 
         //++++++++++++++++++++++++++++Private methods+++++++++++++++++++++++++++++
 
         private void generateAbilities()
         {
-
             Random rnd = new Random();
 
             strength = rnd.Next(1, 100);
@@ -43,26 +38,19 @@ namespace Assignment02
 
         private bool hitAttempt()
         {
-
             Random rnd = new Random();
-
-
 
             if (rnd.Next(1, 6) == 1)
             {
-
                 return true;
-
             }
 
             else
             {
-
                 return false;
-
             }
         }
-            private int hitDamage()
+       private int hitDamage()
 
         {
 
@@ -77,42 +65,29 @@ namespace Assignment02
             //return damage;
 
         }
-
-
             //++++++++++++++++++++++++++++Public methods+++++++++++++++++++++++++++++
 
-            public void fight()
+        public void fight()
+        {
+            if (hitAttempt() == true)
             {
-
-
-
-                if (hitAttempt() == true)
-                {
-
-                    hitDamage();
-
-                }
-
-                else
-                {
-
-
-
-                }
-
+                hitDamage();
+            }
+            else
+            {
             }
 
+        }
 
-            public void show()
-            {
+        public void show()
+        {
 
-                Console.WriteLine("The strength is: {0}", strength);
+            Console.WriteLine("The strength is: {0}", strength);
 
-                Console.WriteLine("The speed is: {0}", speed);
+            Console.WriteLine("The speed is: {0}", speed);
 
-                Console.WriteLine("The health is: {0}", health);
-
-            }
+            Console.WriteLine("The health is: {0}", health);
+        }
      }
 }
 
