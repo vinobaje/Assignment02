@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment02
 {
@@ -18,6 +14,9 @@ namespace Assignment02
             myHero.fight();
 
 
+            SuperHero superHeroMan = new SuperHero("super Hero Man");
+            superHeroMan.showPowers();
+            superHeroMan.fight();
 
             Console.WriteLine("press any key");
 
